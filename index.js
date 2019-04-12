@@ -15,7 +15,7 @@ module.exports = function(source) {
 			literate: query.literate,
 			filename: coffeeRequest,
 			debug: this.debug,
-			bare: true,
+			bare: query.hasOwnProperty('bare') ? query.bare : true,
 			sourceMap: true,
 			sourceRoot: "",
 			sourceFiles: [coffeeRequest],
